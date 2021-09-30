@@ -126,6 +126,9 @@ public class ConexionBD {
         return true;
     }
    
+    public void cerrarConexion (){
+        closeConnection (conn);
+    }
     
     public boolean commitBD (){
          try {
@@ -145,5 +148,11 @@ public class ConexionBD {
             System.out.println("Error al hacer rollback "+sqlex.getMessage());
             return false;
         }   
+         
+    
     }    
+
+    private void closeConnection(Connection conn) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
